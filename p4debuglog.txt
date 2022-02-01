@@ -1,4 +1,4 @@
- gcc -g p3final.c
+ gcc -g p4final.c
  gdb ./a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -16,23 +16,27 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from ./a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x7fc: file p3final.c, line 16.
+Breakpoint 1 at 0x83b: file p4final.c, line 30.
 (gdb) r
-Starting program: /home/runner/pps-test1-Mubarak-al-21/a.out 
+Starting program: /home/runner/pps-test1-Mubarak-al-23/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p3final.c:16
-16  {
+Breakpoint 1, main () at p4final.c:30
+30    a=input();
 (gdb) n
-18    input(&x,&y);
-(gdb) n
-enter the values of a and b: 
+enter a number: 
 n
-19    add(x,y,&z);
+31    b=input();
 (gdb) n
-20    output(x,y,z);
+enter a number: 
+32    c=input();
 (gdb) n
-the sum of 22082 and 1820263744 is 1820285826 :
-21    return 0;
+enter a number: 
+33    big=cmp(a,b,c);
 (gdb) n
-22  }(gdb) 
+34    output(a,b,c,big);
+(gdb) n
+35    return 0;
+(gdb) n
+36  }
+(gdb) 
